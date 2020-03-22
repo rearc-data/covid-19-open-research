@@ -15,7 +15,7 @@ This dataset is intended to mobilize researchers to apply recent advances in nat
 - [Sample Dataset](https://s3.amazonaws.com/rearc-data-provider/covid-19-open-research/public/sample.csv)   
 - [Dateset License](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/2020-03-13/COVID.DATA.LIC.AGMT.pdf)    
 - [COVID-19 Open Research Dataset Homepage](https://pages.semanticscholar.org/coronavirus-research)    
-- Frequency: ?
+- Frequency: Weekly
 
 ## What's included?
 
