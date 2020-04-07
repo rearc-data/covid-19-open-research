@@ -16,28 +16,6 @@ This dataset is intended to mobilize researchers to apply recent advances in nat
 - [COVID-19 Open Research Dataset Homepage](https://pages.semanticscholar.org/coronavirus-research)    
 - Frequency: Weekly
 
-## What's included?
-
-## Automatic Revision Updates, Analytics and Visualizations
-
-## Deploy automation to set up automatic revision updates and AWS Analytics services
-
-### At a high level, CloudFormation will setup following resources automatically.
-
-## Using AWS Glue and Amazon Athena to run interactive queries against the dataset
-
-### Here are some sample Athena SQL queries you can try on the dataset.
-
-**# list 1**
-
-**# list 2**
-
-**# compare 1**
-
-**# compare 2**
-
-## Setup Amazon QuickSight to create visualizations on the dataset
-
 ## Contact Information
 If you have questions about the source data, please contact feedback@semanticscholar.org. If you’re a publisher interested in contributing to the CORD-19 corpus, please contact partnerships@allenai.org. If you have any questions about the CloudFormation stack, Lambda code or any of the AWS services being used, please contact info@rearc.io.
 
