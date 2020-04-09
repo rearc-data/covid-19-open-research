@@ -45,11 +45,9 @@ def source_dataset(s3_bucket, new_s3_key):
     df = pd.read_csv(source_dataset_url + date + '/' + file_name,
                      header=0, dtype={'WHO #Covidence': 'str'}, index_col=None)
                      
-    # converts columns to
+    # converts columns names to follow sql best practices and consistently
     df.columns = df.columns.str.replace(' ', '_')
     df.columns = df.columns.str.replace('#', '')
-
-    # convert column names to lower case
     df.columns = df.columns.str.lower()
 
     # convert all data to lower case for any data type equals string
