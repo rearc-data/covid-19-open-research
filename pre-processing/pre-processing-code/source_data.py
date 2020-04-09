@@ -42,8 +42,19 @@ for key in bucket.objects.filter(Prefix='20'):
 
 
 def source_dataset(s3_bucket, new_s3_key):
-    df = pd.read_csv(source_dataset_url + date + '/' +
-                     file_name, header=0, index_col=None)
+    df = pd.read_csv(source_dataset_url + date + '/' + file_name,
+                     header=0, dtype={'WHO #Covidence': 'str'}, index_col=None)
+                     
+    # converts columns to
+    df.columns = df.columns.str.replace(' ', '_')
+    df.columns = df.columns.str.replace('#', '')
+
+    # convert column names to lower case
+    df.columns = df.columns.str.lower()
+
+    # convert all data to lower case for any data type equals string
+    df = df.applymap(lambda s: s.lower() if type(s) == str else s)
+
     df.to_csv('/tmp/' + file_name, index=False)
 
     # # uploading new s3 dataset
