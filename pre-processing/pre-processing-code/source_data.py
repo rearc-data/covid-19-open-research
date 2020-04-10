@@ -57,4 +57,5 @@ def source_dataset(s3_bucket, new_s3_key):
 
     # # uploading new s3 dataset
     s3 = boto3.client('s3')
-    s3.upload_file('/tmp/' + file_name, s3_bucket, new_s3_key)
+    s3.upload_file('/tmp/' + file_name, s3_bucket, new_s3_key + file_name)
+    
