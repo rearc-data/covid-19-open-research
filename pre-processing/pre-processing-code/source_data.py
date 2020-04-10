@@ -3,11 +3,6 @@ import pandas as pd
 import boto3
 import botocore
 
-# variables to construct the file's location
-source_dataset_url = 'https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/'
-file_name = 'metadata.csv'
-bucket_name = 'ai2-semanticscholar-cord-19'
-
 # function to return most recent date str
 def compare_dates(latest, new):
 
@@ -23,6 +18,10 @@ def compare_dates(latest, new):
 
 def source_dataset(s3_bucket, new_s3_key):
 
+    # variables to construct the file's location
+    source_dataset_url = 'https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/'
+    bucket_name = 'ai2-semanticscholar-cord-19'
+    file_name = 'metadata.csv'
     date = '2020-03-20'
 
     # accessing the public bucket were the desired file is located
