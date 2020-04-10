@@ -5,7 +5,6 @@ import botocore
 
 # variables to construct the file's location
 source_dataset_url = 'https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/'
-date = '2020-03-20'
 file_name = 'metadata.csv'
 bucket_name = 'ai2-semanticscholar-cord-19'
 
@@ -22,26 +21,28 @@ def compare_dates(latest, new):
     else:
         return latest if latest_int[2] > new_int[2] else new
 
-# accessing the public bucket were the desired file is located
-resource = boto3.resource('s3')
-bucket = resource.Bucket(bucket_name)
-exists = True
-try:
-    resource.meta.client.head_bucket(Bucket=bucket_name)
-except botocore.exceptions.ClientError as e:
-    error_code = e.response['Error']['Code']
-    if error_code == '404':
-        exists = False
-
-# interating through the objects in the bucket, and updating the
-# date variable if a more recent date is found
-for key in bucket.objects.filter(Prefix='20'):
-    key_split = key.key.split('/', 1)
-    if key_split[1] == file_name:
-        date = compare_dates(key_split[0], date)
-
-
 def source_dataset(s3_bucket, new_s3_key):
+
+    date = '2020-03-20'
+
+    # accessing the public bucket were the desired file is located
+    resource = boto3.resource('s3')
+    bucket = resource.Bucket(bucket_name)
+    exists = True
+    try:
+        resource.meta.client.head_bucket(Bucket=bucket_name)
+    except botocore.exceptions.ClientError as e:
+        error_code = e.response['Error']['Code']
+        if error_code == '404':
+            exists = False
+
+    # interating through the objects in the bucket, and updating the
+    # date variable if a more recent date is found
+    for key in bucket.objects.filter(Prefix='20'):
+        key_split = key.key.split('/', 1)
+        if key_split[1] == file_name:
+            date = compare_dates(key_split[0], date)
+
     df = pd.read_csv(source_dataset_url + date + '/' + file_name,
                      header=0, dtype={'WHO #Covidence': 'str'}, index_col=None)
                      
