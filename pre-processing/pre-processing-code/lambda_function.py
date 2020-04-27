@@ -1,9 +1,9 @@
-import pandas as pd
 import time
 import json
 from source_data import source_dataset
 import boto3
 import os
+from datetime import date
 
 os.environ['AWS_DATA_PATH'] = '/opt/'
 
@@ -26,8 +26,7 @@ new_s3_key = data_set_name + '/dataset/'
 cfn_template = data_set_name + '/automation/cloudformation.yaml'
 post_processing_code = data_set_name + '/automation/post-processing-code.zip'
 
-# pd.datetime is an alias for datetime.datetime
-today = pd.datetime.today().date()
+today = date.today()
 revision_comment = 'Revision Updates v' + today.strftime('%Y-%m-%d')
 
 if not s3_bucket:
@@ -88,7 +87,7 @@ def lambda_handler(event, context):
 				'AssetSources': [
 					{
 						'Bucket': s3_bucket,
-						'Key': new_s3_key + 'metadata.csv'
+						'Key': new_s3_key + 'metedata.csv'
 					}
 				]
 			}

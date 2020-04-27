@@ -5,7 +5,8 @@ In response to the COVID-19 pandemic, the Allen Institute for AI has partnered w
 
 This dataset is intended to mobilize researchers to apply recent advances in natural language processing to generate new insights in support of the fight against this infectious disease. The corpus will be updated weekly as new research is published in peer-reviewed publications and archival services like bioRxiv, medRxiv, and others.
 
-If you are interested in subscribing to this product on AWS Data Exchange, please click [here](https://aws.amazon.com/marketplace/pp/prodview-ybwpxcqlznbas?ref_=srh_res_product_title).
+If you are interested in exploring this product on GitHub, please click [here](https://github.com/rearc-data/covid-19-open-research).
+
 
 ### Data Sources
 This resource includes the `metadata.csv` file released weekly by the Allen Institute for AI, which documents COVID-19 updates and new research published in peer-reviewed publications. The columns of the dataset are:
@@ -22,7 +23,7 @@ To explore addtional COVID-19 resources distributed by the Allen Institute for A
 - Format: CSV
 
 ## Contact/Support Information
-- If you find any issues with or have enhancement ideas for this product, open up a GitHub [issue](https://github.com/rearc-data/covid-19-open-research/issues) and we will gladly take a look at it. Better yet, submit a pull request. Any contributions you make are greatly appreciated :heart:.
+- If you find any issues with or have enhancement ideas for this product, open up a GitHub [issue](https://github.com/rearc-data/covid-19-open-research/issues) and we will gladly take a look at it. Better yet, submit a pull request. Any contributions you make are greatly appreciated ♥.
 - If you are looking for specific open datasets currently not available on ADX, please submit a request on our project board [here](https://github.com/rearc-data/covid-datasets-aws-data-exchange/projects/1).
 - If you have questions about the source data, please contact feedback@semanticscholar.org.
 - If you have any other questions or feedback, send us an email at data@rearc.io.
