@@ -87,7 +87,7 @@ def lambda_handler(event, context):
 				'AssetSources': [
 					{
 						'Bucket': s3_bucket,
-						'Key': new_s3_key + 'metedata.csv'
+						'Key': new_s3_key + 'metadata.csv'
 					}
 				]
 			}
