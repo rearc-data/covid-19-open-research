@@ -1,3 +1,7 @@
+<a href="https://www.rearc.io/data/">
+    <img src="./rearc_logo_rgb.png" alt="Rearc Logo" title="Rearc Logo" height="52" />
+</a>
+
 # COVID-19 Open Research Dataset (CORD-19) | Allen Institute for AI
 
 ## Main Description
