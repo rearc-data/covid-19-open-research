@@ -6,12 +6,12 @@
 
 You can subscribe to the AWS Data Exchange product utilizing the automation featured in this repository by visiting [https://aws.amazon.com/marketplace/pp/prodview-ybwpxcqlznbas](https://aws.amazon.com/marketplace/pp/prodview-ybwpxcqlznbas). 
 
-## Product Description
+## Main Overview
 In response to the COVID-19 pandemic, the Allen Institute for AI has partnered with leading research groups to prepare and distribute the COVID-19 Open Research Dataset (CORD-19), a free resource of over 44,000 scholarly articles, including over 29,000 with full text, about COVID-19 and the coronavirus family of viruses for use by the global research community.
 
 This dataset is intended to mobilize researchers to apply recent advances in natural language processing to generate new insights in support of the fight against this infectious disease. The corpus will be updated weekly as new research is published in peer-reviewed publications and archival services like bioRxiv, medRxiv, and others.
 
-### Data Sources
+#### Data Sources
 This resource includes the `metadata.csv` file released weekly by the Allen Institute for AI, which documents COVID-19 updates and new research published in peer-reviewed publications. The columns of the dataset are:
 
 `cord_uid, sha,source_x, title,doi, pmcid, pubmed_id, license, abstract, publish_time, authors, journal, microsoft_academic_paper_id, who_covidence, has_pdf_parse, has_pmc_xml_parse, full_text_file, url`
