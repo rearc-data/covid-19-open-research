@@ -22,7 +22,7 @@ data_set_arn = os.environ['DATA_SET_ARN']
 data_set_id = data_set_arn.split("/", 1)[1]
 product_id = os.environ['PRODUCT_ID']
 data_set_name = os.environ['DATA_SET_NAME']
-new_s3_key = data_set_name + '/dataset/metedata.csv'
+new_s3_key = data_set_name + '/dataset/metadata.csv'
 cfn_template = data_set_name + '/automation/cloudformation.yaml'
 post_processing_code = data_set_name + '/automation/post-processing-code.zip'
 
